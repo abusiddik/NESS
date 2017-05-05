@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 4, 2017 9:52:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ness.entity.Ward" table="ward" catalog="evoting" optimistic-lock="version">
+        <id name="wardId" type="java.lang.Integer">
+            <column name="ward_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="union" class="com.ness.entity.Union" fetch="select">
+            <column name="union_id" />
+        </many-to-one>
+        <property name="wardName" type="string">
+            <column name="ward_name" length="45" />
+        </property>
+        <set name="voteCenters" table="vote_center" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ward_id" />
+            </key>
+            <one-to-many class="com.ness.entity.VoteCenter" />
+        </set>
+        <set name="voterInfos" table="voter_info" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ward_id" />
+            </key>
+            <one-to-many class="com.ness.entity.VoterInfo" />
+        </set>
+    </class>
+</hibernate-mapping>

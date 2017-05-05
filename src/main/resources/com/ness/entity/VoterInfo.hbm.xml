@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 4, 2017 9:52:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ness.entity.VoterInfo" table="voter_info" catalog="evoting" optimistic-lock="version">
+        <id name="voterId" type="java.lang.Integer">
+            <column name="voter_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="ward" class="com.ness.entity.Ward" fetch="select">
+            <column name="ward_id" />
+        </many-to-one>
+        <property name="nid" type="java.lang.Integer">
+            <column name="nid" />
+        </property>
+        <property name="FName" type="string">
+            <column name="f_name" length="45" />
+        </property>
+        <property name="LName" type="string">
+            <column name="l_name" length="45" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="10" />
+        </property>
+        <property name="dob" type="date">
+            <column name="dob" length="10" />
+        </property>
+        <property name="fatherName" type="string">
+            <column name="father_name" length="45" />
+        </property>
+        <property name="motherName" type="string">
+            <column name="mother_name" length="45" />
+        </property>
+        <property name="bloodGroup" type="string">
+            <column name="blood_group" length="45" />
+        </property>
+        <property name="age" type="string">
+            <column name="age" length="45" />
+        </property>
+        <property name="occupation" type="string">
+            <column name="occupation" length="45" />
+        </property>
+        <property name="religion" type="string">
+            <column name="religion" length="45" />
+        </property>
+        <property name="maritalStatus" type="java.lang.Boolean">
+            <column name="marital_status" />
+        </property>
+        <property name="nationality" type="string">
+            <column name="nationality" length="45" />
+        </property>
+        <property name="presentAddress" type="string">
+            <column name="present_address" length="150" />
+        </property>
+        <property name="permanentAddress" type="string">
+            <column name="permanent_address" length="150" />
+        </property>
+        <property name="voterImage" type="binary">
+            <column name="voter_image" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="isVoted" type="java.lang.Integer">
+            <column name="isVoted" />
+        </property>
+    </class>
+</hibernate-mapping>

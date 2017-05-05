@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 4, 2017 9:52:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ness.entity.Party" table="party" catalog="evoting" optimistic-lock="version">
+        <id name="partyId" type="java.lang.Integer">
+            <column name="party_id" />
+            <generator class="identity" />
+        </id>
+        <property name="partyName" type="string">
+            <column name="party_name" length="45" />
+        </property>
+        <property name="partySymbol" type="binary">
+            <column name="party_symbol" />
+        </property>
+        <set name="candidates" table="candidate" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="party_id" />
+            </key>
+            <one-to-many class="com.ness.entity.Candidate" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,245 @@
+body {
+    padding-top: 10px;
+}
+
+.page{
+    min-height: 400px;
+}
+
+footer{
+    margin-top:50px;
+    padding-top:50px;
+}
+
+.toolbar{
+    margin:10px;
+}
+
+
+.pagecontainer{
+  position: relative;
+width: 1150px;
+height: auto;
+background-color: red;
+
+    
+}
+
+#topSide{
+  height: 45px;
+  background: #9ED495;
+  border-bottom: 2px solid #afafaf;
+  color: #ffffff
+}
+.date{
+  border-right: 1px solid #ffffff
+}
+#topSide .pull-right{
+  padding-right: 7px
+}
+#mainNav{
+  border: none;
+  margin-top: 1%;
+  background: #62984A;
+  margin:0px;
+}
+.mega-dropdown {
+  position: static !important;
+}
+.mega-dropdown-menu {
+    padding: 20px 0px;
+    width: 100%;    
+}
+.mega-dropdown-menu li a{
+  color: #ffffff;
+}
+.mega-dropdown-menu > li > ul > li {
+  list-style: none;
+}
+.mega-dropdown-menu > li > ul > li > a {
+  display: block;
+  color: #222;
+  padding: 3px 5px;
+}
+.mega-dropdown-menu > li ul > li > a:hover,
+.mega-dropdown-menu > li ul > li > a:focus {
+  text-decoration: none;
+}
+.mega-dropdown-menu .dropdown-header {
+  font-size: 18px;
+  color: black;
+  padding: 5px 0px 5px 5px;
+  line-height: 30px;
+}
+
+
+.item img{
+  width: 100%
+}
+#topSec{
+  margin: 10px 0px 10px 0px;
+}
+.tab-content div{
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 0px
+}
+#scrollSlider .col-md-9 , #scrollSlider .col-md-3{
+  margin-top: 7px;
+}
+#scrollSlider h4{
+  background: #4E724c;
+  color: #ffffff;
+  margin: 0px;
+  padding: 10px 0px 10px 10px;
+}
+.holder { 
+  width:100%;
+  height:250px;
+  overflow:hidden;
+  padding:10px;
+  font-family:Helvetica;
+  min-height: 307px;
+  border-bottom: 1px solid #4E724c;
+}
+.holder ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  position: relative;
+}
+.holder ul li {
+  padding:10px 0px;
+}
+.holder ul li a {
+  color:darkred;
+  text-decoration:none;
+}
+.nav-tabs{
+  border: none
+}
+.e-service{
+  margin-top: 50px
+}
+.siderbar-nav a{
+  background: #99dd58;
+  padding: 15px 37px 15px 40px;
+  color: #ffffff;
+  display: block;
+  margin-top: 3px
+}
+.nav-tabs a{
+  background: #96A996;
+  color: #fff
+}
+#mainContentDiv .col-md-9{
+  margin-left: 0px;
+  margin-right: 0px
+}
+#mainContentDiv .col-md-9 , #mainContentDiv .col-md-3{
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+/* Footer part goes here */
+
+.latest-news span{
+  display: block;
+  color: #efefef;
+}
+.newsletter-box input{
+  height: 30px;
+  clear: both;
+  margin-bottom: 15px 
+}
+.newsltr{
+  color: #54697E;
+  margin-bottom: 10px
+}
+.newsletter-box {
+  overflow: hidden;
+}
+.full {
+    width: 100%;  
+}
+.footer {
+  background: #293A48;
+  height: auto;
+  padding-bottom: 30px;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #CCCCCC;
+  border-top: 1px solid #DDDDDD;
+}
+.footer h3 {
+  border-bottom: 1px solid #BAC1C8;
+  color: #54697E;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  padding: 40px 0 10px;
+  text-transform: uppercase;
+}
+.footer ul {
+  font-size: 13px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 15px;
+  color: #7F8C8D;
+}
+.footer ul li a {
+  padding: 0 0 5px 0;
+  display: block;
+}
+.footer a {
+  color: #78828D
+}
+.social li {
+  background: none repeat scroll 0 0 #B5B5B5;
+  border: 2px solid #B5B5B5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 8px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+.social li:hover {
+  transform: scale(1.15) rotate(360deg);
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -moz-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
+  -o-transform: scale(1.1) rotate(360deg);
+}
+.social li a {
+  color: #EDEFF1;
+}
+.social li:hover {
+  border: 2px solid #2c3e50;
+  background: #2c3e50;
+}
+.social li a i {
+  font-size: 16px;
+  margin: 0 0 0 5px;
+  color: #EDEFF1 !important;
+}
+.footer-bottom {
+  background: #20273A;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffffff
+}
+.footer-bottom p.pull-left {
+  padding-top: 6px;
+}

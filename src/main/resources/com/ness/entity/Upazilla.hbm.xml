@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 4, 2017 9:52:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ness.entity.Upazilla" table="upazilla" catalog="evoting" optimistic-lock="version">
+        <id name="upazillaId" type="java.lang.Integer">
+            <column name="upazilla_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="district" class="com.ness.entity.District" fetch="select">
+            <column name="district_id" />
+        </many-to-one>
+        <property name="upazillaName" type="string">
+            <column name="upazilla_name" length="45" />
+        </property>
+        <set name="unions" table="union" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="upazilla_id" />
+            </key>
+            <one-to-many class="com.ness.entity.Union" />
+        </set>
+    </class>
+</hibernate-mapping>

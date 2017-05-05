@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 4, 2017 9:52:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.ness.entity.Election" table="election" catalog="evoting" optimistic-lock="version">
+        <id name="electionId" type="java.lang.Integer">
+            <column name="election_id" />
+            <generator class="identity" />
+        </id>
+        <property name="electionType" type="string">
+            <column name="election_type" length="20" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="votingStartTime" type="timestamp">
+            <column name="voting_start_time" length="19" />
+        </property>
+        <property name="votingEndTime" type="timestamp">
+            <column name="voting_end_time" length="19" not-null="true" />
+        </property>
+        <property name="isActive" type="int">
+            <column name="isActive" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
